@@ -1,0 +1,43 @@
+.menu-aluno {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Alterado para bordas arredondadas maiores /
+    background-color: #007bff; / Alterada a cor de fundo para azul */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+    
+.menu-aluno h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0); /* Alterada a cor do título para branco */
+}
+    
+.menu-aluno ul {
+    list-style-type: none;
+    padding: 0;
+}
+    
+.menu-aluno li {
+    margin-bottom: 10px;
+}
+    
+.menu-aluno a {
+    display: block;
+    padding: 10px;
+    background-color: #0056b3; 
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px; 
+}
+    
+.menu-aluno a{
+    background-color: #004ea8; /* Alterada a cor de fundo no hover para um tom mais escuro */
+}

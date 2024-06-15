@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [usuario, setUsuario] = useState('');
-  const [senha, setsenha] = useState('');
+  const [senha, setSenha] = useState('');
   const [tipoUsuario, setTipoUsuario] = useState('aluno'); // Valor padrão: aluno
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Importe useNavigate para redirecionamento
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -16,16 +18,21 @@ function Login() {
       }
 
       const response = await fetch(loginURL, {
-        method: 'POST', // Alterado para POST
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-   // Enviando usuário e senha no corpo da solicitação
+        body: JSON.stringify({ usuario, senha })
       });
 
       if (response.ok) {
         console.log('Login bem-sucedido!');
-        // Você pode adicionar redirecionamento ou outra lógica aqui para lidar com o login bem-sucedido
+        // Redirecionar para o menu correto
+        if (tipoUsuario === 'funcionario') {
+          navigate('/menuFuncionario');
+        } else {
+          navigate('/menuAluno');
+        }
       } else {
         const errorData = await response.json();
         setError(errorData.message || 'Erro ao fazer login');
@@ -52,10 +59,10 @@ function Login() {
         <div className="form-group">
           <label htmlFor="senha">Senha:</label>
           <input
-            type="senha"
+            type="password" 
             id="senha"
             value={senha}
-            onChange={(e) => setsenha(e.target.value)}
+            onChange={(e) => setSenha(e.target.value)}
             required
           />
         </div>

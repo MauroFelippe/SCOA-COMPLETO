@@ -1,0 +1,39 @@
+.menu-funcionario {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Alterado para bordas arredondadas maiores */
+    background-color: #007bff; /* Alterada a cor de fundo para azul */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-funcionario h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Alterada a cor do título para branco */
+  }
+  
+  .menu-funcionario ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-funcionario li {
+    margin-bottom: 10px;
+  }
+  
+  .menu-funcionario a {
+    display: block;
+    padding: 10px;
+    background-color: #0056b3; /* Alterada a cor de fundo dos links para azul mais escuro */
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px; /* Mantida a borda arredondada */
+  }
+  
+  .menu-funcionario a:hover {
+    background-color: #004ea8; /* Alterada a cor de fundo no hover para um tom mais escuro */
+  }
