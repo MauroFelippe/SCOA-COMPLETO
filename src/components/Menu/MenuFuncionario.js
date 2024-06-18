@@ -1,34 +1,19 @@
-/*import React from 'react';
-import MenuItem from './MenuItem';
-
-const MenuFuncionario = () => (
-    <ul>
-        <MenuItem label="Biblioteca" path="/biblioteca" />
-        <MenuItem label="Disciplina" path="/disciplina" />
-        <MenuItem label="Prova" path="/prova" />
-        <MenuItem label="Recado" path="/recado" />
-        <MenuItem label="Inserir Item" path="/inserir" />
-        <MenuItem label="Remover Item" path="/remover" />
-        <MenuItem label="Editar Item" path="/editar" />
-    </ul>
-);
-
-export default MenuFuncionario;*/
 import React from 'react';
-import './MenuFuncionario.css'; // Importe o arquivo CSS do MenuFuncionario
+import { Link } from 'react-router-dom';
+import './MenuFuncionario.css';
 
 function MenuFuncionario() {
   return (
     <div className="menu-funcionario">
-      <h2>Menu do Funcionário</h2>
+      <h2>Menu Funcionário</h2>
       <ul>
-        <li><a href="/biblioteca">Biblioteca</a></li>
-        <li><a href="/disciplina">Disciplina</a></li>
-        <li><a href="/prova">Prova</a></li>
-        <li><a href="/recado">Recado</a></li>
-        <li><a href="/inserir">Inserir</a></li>
-        <li><a href="/remover">Remover</a></li>
-        <li><a href="/editar">Editar</a></li>
+        <li><Link to="/biblioteca-funcionario">Biblioteca</Link></li>
+        <li><Link to="/disciplina-funcionario">Disciplina</Link></li>
+        <li><Link to="/prova-funcionario">Prova</Link></li>
+        <li><Link to="/recado-funcionario">Recado</Link></li>
+        <li><Link to="/NotasFuncionario">Notas</Link></li>
+        <li><Link to="/adicionar-pessoa">Adicionar Aluno ou Funcionário</Link></li>
+        
       </ul>
     </div>
   );
